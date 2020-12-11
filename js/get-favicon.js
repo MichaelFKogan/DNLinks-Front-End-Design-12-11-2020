@@ -1,0 +1,17 @@
+$("a[href^='http']").each(function() {
+console.log(this.href);
+if (this.href.includes('https://www.youtube.com') == true){$(this).prepend('<img src="./img/youtube-icon.png" style="height:14px; margin-right:5px;margin-bottom:1px; ">');}
+else if (this.href.includes('https://www.facebook.com') == true){$(this).prepend('<img src="./img/facebook-icon.png" style="height:16px; margin-right:5px;margin-bottom:0px; ">');}
+else if (this.href.includes('https://www.instagram.com') == true){$(this).prepend('<img src="./img/instagram-icon.png" style="height:14px; margin-right:5px;margin-bottom:1px; ">');}
+else if (this.href.includes('https://www.reddit.com') == true){$(this).prepend('<img src="./img/reddit-icon.png" style="height:17px; margin-right:5px;margin-bottom:0px; ">');}
+else{
+$(this).prepend('<img src="https://www.google.com/s2/favicons?domain=' + this.hostname + '" style="height:16px; margin-right:5px;margin-bottom:3px; ">');
+}
+});
+// $("li").mouseover(function(){
+// 	if ($(this).children("a").attr("href")){
+// 		$(this).children("a").append('<img id="newWindow" src="new-window-icon.png" style="height:13px;float:right;margin-top:5px;">');
+// 	}
+// }).mouseout(function() {
+// 	$(this).find("#newWindow").remove();
+// });
